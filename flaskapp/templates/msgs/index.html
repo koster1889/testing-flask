@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h2>Messages</h2>
+    {% for name, messages in convos.items() %}
+        <h4> {{name}}</h4>
+        {% for message in messages %}
+        <div>
+            <small>From: {{ message['from_username'] }}, To: {{ message['to_username'] }}</small>
+            <input style="display:none" value=" {{ message['from_id'] }}">
+            <p>
+            {{ message['body'] }}
+            </p>
+        </div>
+        {% endfor %}
+    {% endfor %}
+
+{% endblock %}

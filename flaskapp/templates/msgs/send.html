@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form method="POST">
+    <label>To:</label>
+    <input id="to_username_id" name="to_username" type="text">
+    <textarea name="body"></textarea>
+    <button type="submit">Send</button>
+</form>
+
+{% endblock %}
