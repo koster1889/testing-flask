@@ -1,7 +1,9 @@
-{% extends "base.html" %}
+{% extends "feature.html" %}
+
+{% block title %} Messages {% endblock%}
+
 {% block content %}
 
-    <h2>Messages</h2>
     {% for name, messages in convos.items() %}
         <h4> {{name}}</h4>
         {% for message in messages %}

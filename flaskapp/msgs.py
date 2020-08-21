@@ -8,8 +8,9 @@ bp = Blueprint('message', __name__)
 
 @bp.route('/msgs')
 def index():
-    db = get_db()
-    convos = get_conversations()
+    convos = {}
+    if g.user is not None:
+        convos = get_conversations()
     return render_template('msgs/index.html', convos=convos)
 
 @bp.route('/users')

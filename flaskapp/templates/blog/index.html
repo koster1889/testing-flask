@@ -1,12 +1,7 @@
-{% extends 'base.html' %}
+{% extends 'feature.html' %}
 
-{% block header %}
-  <h1>{% block title %}Posts{% endblock %}</h1>
-  {% if g.user %}
-    <a class="action" href="{{ url_for('blog.create') }}">New blog</a>
-    <a class="action" href="{{ url_for('message.create') }}">New message</a>
-  {% endif %}
-{% endblock %}
+
+{% block title %}Posts{% endblock %}
 
 {% block content %}
   {% for post in posts %}
