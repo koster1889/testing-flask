@@ -4,6 +4,8 @@
 
 {% block content %}
 
+    <a class="action" href="{{ url_for('message.create') }}">New message</a>
+
     {% for name, messages in convos.items() %}
         <h4> {{name}}</h4>
         {% for message in messages %}

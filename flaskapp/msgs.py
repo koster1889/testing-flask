@@ -6,12 +6,13 @@ from .auth import login_required
 
 bp = Blueprint('message', __name__)
 
-@bp.route('/msgs')
+@bp.route('/')
 def index():
     convos = {}
     if g.user is not None:
         convos = get_conversations()
     return render_template('msgs/index.html', convos=convos)
+
 
 @bp.route('/users')
 def users():
@@ -47,7 +48,6 @@ def create():
 
 
 def get_conversations():
-    username = g.user['username']
     user_id = g.user['id']
     db = get_db()
     messages = db.execute(
