@@ -1,15 +1,19 @@
-{% extends 'feature.html' %}
-
-{% block title %} Create {% endblock %}
-
-{% block content %}
+{% extends 'feature.html' %} {% block title %} Create {% endblock %} {% block
+content %}
 
 <form method="post">
-    <label for="title">Title:</label>
-    <input type="text" id="title" name="title" value="{{ request.form['title'] }}" required>
-    <label for="body">Body:</label>
-    <textarea type="text" name="body" id="body">{{ request.form['body'] }}</textarea>
-    <button type="submit">Save</button>
+    <div class="form-group">
+        <label for="title">Title:</label>
+        <input class="form-control" type="text" id="title" name="title" value="{{ request.form['title'] }}" required />
+    </div>
+    <div>
+        <label for="body">Body:</label>
+        <textarea class="form-control" type="text" name="body" id="body">
+        {{ request.form['body'] }}
+        </textarea>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Save</button>
 </form>
 
 {% endblock %}

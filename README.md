@@ -1,5 +1,5 @@
 # TODO
 
-* Add links
-* Add some bootstrap
-* Deploy to AWS EB
+(/) Add links
+( ) Add some bootstrap
+( ) Deploy to AWS EB
